@@ -1,0 +1,20 @@
+---
+- name: Run df and ifconfig commands to check disk space and network info
+  hosts: all
+  remote_user: ansible
+  tasks:
+    - name: Execute df -h command
+      ansible.builtin.command: df -h
+      register: df_output
+
+    - name: Display df output
+      ansible.builtin.debug:
+        var: df_output.stdout_lines
+
+    - name: Execute ifconfig command
+      ansible.builtin.command: ifconfig
+      register: ifconfig_output
+
+    - name: Display ifconfig output
+      ansible.builtin.debug:
+        var: ifconfig_output.stdout_lines

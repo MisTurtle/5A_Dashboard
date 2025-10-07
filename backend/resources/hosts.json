@@ -1,0 +1,15 @@
+[
+      {
+        "name": "Test Group 1",
+        "hosts": [
+          {
+            "name": "workstation",
+            "ip": "192.168.10.31"
+          },
+          {
+            "name": "server",
+            "ip": "192.168.10.30"
+          }
+        ]
+      }
+]
